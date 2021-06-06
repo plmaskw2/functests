@@ -26,7 +26,7 @@ public class SimpleFirstTest {
         AGREE.click();
 
         WebElement GOOGLE_SEARCH = driver.findElement(By.xpath("//input[@type='submit']"));
-        Assert.assertEquals("Szukaj w Google", GOOGLE_SEARCH.getAttribute("value"));
+        Assert.assertEquals("Szukaj w Google1", GOOGLE_SEARCH.getAttribute("value"));
     }
 
     @After
