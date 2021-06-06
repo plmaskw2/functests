@@ -21,7 +21,7 @@ public class Driver {
         }
         else if (Configuration.getConfiguration().getOperationalSystem().contains("Debian")){
             FirefoxOptions options = new FirefoxOptions();
-            System.out.println("it contains firefox");
+            options.addArguments("--headless");
             options.addArguments("--start-maximized");
             System.setProperty("webdriver.gecko.driver", getConfiguration().getFirefoxDriverLocation());
             driver = new FirefoxDriver(options);
