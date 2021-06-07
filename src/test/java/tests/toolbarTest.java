@@ -37,7 +37,7 @@ public class toolbarTest {
     @Test
     public void testInputForms() {
         List<String> listOfElements = Arrays.asList(
-                "Simple Form Demo1",
+                "Simple Form Demo",
                 "Checkbox Demo",
                 "Radio Buttons Demo",
                 "Select Dropdown List",
