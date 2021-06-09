@@ -27,40 +27,24 @@ public class footerTest {
         popupsAlerts.closeWelcomePopup();
     }
 
+    @After
+    public void tearDown(){
+        driver.quit();
+    }
+
     @Test
     public void tutorialsMenuTest(){
-        List<String> listOfElements = Arrays.asList(
-                "Selenium Tutorials",
-                "TestNG Tutorial",
-                "JUnit Tutorial",
-                "JXL Tutorial",
-                "Apache POI",
-                "ANT Tutorial",
-                "Maven Tutorial"
-        );
-        for(int counter = 0; counter < listOfElements.size(); counter++) {
-            Asserts.assertEquals(listOfElements.get(counter) + " is visible", listOfElements.get(counter), driver.findElements(By.xpath(footerPage.TUTORIALS_MENU + "/../ul/li/a")).get(counter).getText());
+        for(int counter = 0; counter < footerPage.listOfElementsTutorialsMenu.size(); counter++) {
+            Asserts.assertEquals(footerPage.listOfElementsTutorialsMenu.get(counter) + " is visible", footerPage.listOfElementsTutorialsMenu.get(counter), driver.findElements(By.xpath(footerPage.TUTORIALS_MENU + "/../ul/li/a")).get(counter).getText());
         }
     }
 
     @Test
     public void popularPostsTest(){
-        List<String> listOfElements = Arrays.asList(
-                "Gecko Driver Selenium 3",
-                "Page Factory Pattern",
-                "Execute Tests in Jenkins",
-                "TestNG Custom Report",
-                "Execute Selenium tests using Maven",
-                "View All Selenium Tutorials"
-        );
 
-        for(int counter = 0; counter < listOfElements.size(); counter++) {
-            Asserts.assertEquals(listOfElements.get(counter) + " is visible", listOfElements.get(counter), driver.findElements(By.xpath(footerPage.POPULAR_POSTS + "/../ul/li/a")).get(counter).getText());
+
+        for(int counter = 0; counter < footerPage.listOfElementsPopularPosts.size(); counter++) {
+            Asserts.assertEquals(footerPage.listOfElementsPopularPosts.get(counter) + " is visible", footerPage.listOfElementsPopularPosts.get(counter), driver.findElements(By.xpath(footerPage.POPULAR_POSTS + "/../ul/li/a")).get(counter).getText());
         }
-    }
-
-    @After
-    public void tearDown(){
-        driver.quit();
     }
 }

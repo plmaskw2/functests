@@ -3,6 +3,9 @@ package PageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ToolBarPage extends GenericPage {
 
     public static final String INPUT_FORMS = "//a[@class=\'dropdown-toggle\'][contains(text(), \'Input Forms\')]"; //XPATH
@@ -14,6 +17,50 @@ public class ToolBarPage extends GenericPage {
     public static final String LIST_BOX = "//a[@class=\'dropdown-toggle\'][contains(text(), \'List Box\')]"; //XPATH
     public static final String OTHERS = "//a[@class=\'dropdown-toggle\'][contains(text(), \'Others\')]"; //XPATH
 
+    public List<String> listOfElementsInputForms = Arrays.asList(
+            "Simple Form Demo",
+            "Checkbox Demo",
+            "Radio Buttons Demo",
+            "Select Dropdown List",
+            "Input Form Submit",
+            "Ajax Form Submit",
+            "JQuery Select dropdown"
+    );
+    public List<String> listOfElementsDatePickiers = Arrays.asList(
+            "Bootstrap Date Picker",
+            "JQuery Date Picker"
+    );
+    public List<String> listOfElementsTable = Arrays.asList(
+            "Table Pagination",
+            "Table Data Search",
+            "Table Filter",
+            "Table Sort & Search",
+            "Table Data Download"
+    );
+
+    public List<String> listOfElementsProgressBars = Arrays.asList(
+            "JQuery Download Progress bars",
+            "Bootstrap Progress bar",
+            "Drag & Drop Sliders"
+    );
+    public List<String> listOfElementsAlertsModals = Arrays.asList(
+            "Bootstrap Alerts",
+            "Bootstrap Modals",
+            "Window Popup Modal",
+            "Progress Bar Modal",
+            "Javascript Alerts",
+            "File Download"
+    );
+    public List<String> listOfElementsListBox = Arrays.asList(
+            "Bootstrap List Box",
+            "JQuery List Box",
+            "Data List Filter"
+    );
+    public List<String> listOfElementsOthers = Arrays.asList(
+            "Drag and Drop",
+            "Dynamic Data Loading",
+            "Charts Demo"
+    );
 
     public ToolBarPage(WebDriver driver) {
         super(driver);
