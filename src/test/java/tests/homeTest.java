@@ -33,6 +33,8 @@ public class homeTest {
 
     @Test
     public void homeTest() throws InterruptedException {
+        System.out.println(System.getProperty("os.name"));
+
         homePage.clickWelcome();
         Asserts.assertTrue("Welcome text is visible", driver.findElement(By.xpath(homePage.WELCOME_TEXT)).isDisplayed());
         Asserts.assertFalse("Basic text is not visible", driver.findElement(By.xpath(homePage.BASIC_TEXT)).isDisplayed());
