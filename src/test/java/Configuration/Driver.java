@@ -13,13 +13,13 @@ public class Driver {
 
     private static WebDriver getSpecificDriver() {
         WebDriver driver = null;
-        if (Configuration.getConfiguration().getOperationalSystem().contains("Win10")) {
+        if (System.getProperty("os.name").contains("Windows 10")) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
             System.setProperty("webdriver.chrome.driver", getConfiguration().getChromeDriverLocation());
             driver = new ChromeDriver(options);
         }
-        else if (Configuration.getConfiguration().getOperationalSystem().contains("Debian")){
+        else if (System.getProperty("os.name").contains("Linux")){
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("--headless");
             options.addArguments("--start-maximized");
